@@ -1,13 +1,11 @@
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { Text, View } from 'react-native';
+import 'react-native-gesture-handler';
+import { NavigationContainer } from '@react-navigation/native';
+import MainTabs from '../screens/MainTabs';
 
-const Tab = createBottomTabNavigator();
-
-export default function MainTabs() {
+export default function App() {
   return (
-    <Tab.Navigator>
-      <Tab.Screen name="Home" component={() => <View><Text>Home 🏠</Text></View>} />
-      <Tab.Screen name="Chat" component={() => <View><Text>Chat 💬</Text></View>} />
-    </Tab.Navigator>
+    <NavigationContainer>
+      <MainTabs />
+    </NavigationContainer>
   );
 }
